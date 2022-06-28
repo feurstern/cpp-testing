@@ -9,6 +9,7 @@ int abc(int a, int b, int c){
     return a*b*c;
 }
 
+
 int main(){
     cout.setf(cout.boolalpha);
 
@@ -32,6 +33,6 @@ int main(){
     cout<<"Press enter to terminate the programe";
     cin.ignore(10,'\n');
     cin.get();
-    
+        
     return 0;
 }
