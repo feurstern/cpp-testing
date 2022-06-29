@@ -1,0 +1,90 @@
+Jawaban soal no 1:
+
+#include<iostream>
+
+using namespace std;
+
+
+void checknumber(int n){
+    if(n%2==0){
+        cout<<"Bilangain ini genap"<<endl;
+    }
+    else{
+        cout<<"bilangan ini ganjil"<<endl;
+
+    }
+
+}
+
+
+int main(){
+    int n;
+    
+
+    cout<<"Masukkan bilangan bulat"<<endl;
+    cin>>n;
+
+    checknumber(n);
+
+    system("pause");
+    return EXIT_SUCCESS;
+}
+
+
+
+Jawaban soal no 2:
+
+#include<iostream>
+#include<iostream>
+using namespace std;
+
+void checknumber(int n){
+
+    for (int i= 0; i<=n;i++){
+        if(i%3==0){
+            cout<<"\n"<<i<<" adalah kelipatan "<<"3"<<endl;
+        }
+        else if(i%5==0){
+
+            cout<<"\n"<<i<<" adalah kelipatan"<<i<<" dan "<<"5"<<endl;
+
+
+        }    
+    }
+}
+
+
+int main(){
+    
+    int n;
+    cout<<"Masukkan bilangan bulat"<<endl;
+    cin>>n;
+
+    checknumber(n);
+
+    system("pause");
+    return EXIT_SUCCESS;
+}
+
+Jawaban soal no 3
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main(){
+    
+    vector<string> userInput;
+    string input;
+    while(cin>>input){
+        userInput.push_back(input);
+         cout<<"\nSaya punya "<<input<<", "<<endl;
+    }
+
+   //const char* watches[3] = {"Swiss Army","Dublot","G-Shock"};
+
+   // cout<<"Saya punya "<<watches[0]<<", "<<watches[1]<<", "<<", "<<watches[2];
+
+ system("pause");
+ return EXIT_SUCCESS;
+}
