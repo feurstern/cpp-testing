@@ -119,11 +119,17 @@ class Employee: AbstractEmployee{
          Age = age;
          WorklyHours = worklyHours;
      }
+
+     
+     //implemented polymorphism
+     void Work(){
+         cout<<getName()<< " doing some typing in computer"<<endl;
+     }
 };
 
 // Inheritance or making derived class
 
-class Developer : Employee{
+class Developer : public Employee{
 
     string FavProgrammingLanguage;
 
@@ -147,8 +153,30 @@ class Developer : Employee{
     }
     void ProjectHasDone(){
             cout<<"I am using "<<FavProgrammingLanguage<<endl;
+            cout<<"My name is"<<getName();
         }
+    
+     void Work(){
+         cout<<getName()<< " is writing "<<FavProgrammingLanguage<<" for his project"<<endl;
+     }
  
+};
+
+class Teacher: public Employee{
+    
+    public:
+    string Subject;
+
+    void PrepareLesson(){
+        cout<<getName()<<" is preparing to teach"<<Subject<<" lesson!"<<endl;
+    }
+
+    Teacher(string name, string company, string education, int age, int worklyHour, string subject)
+    :Employee(name,company,education,age, worklyHour){
+
+        Subject =subject;
+
+    }
 };
 
 int main(){
@@ -168,6 +196,7 @@ int main(){
 
     Developer developer1 = Developer("Rio","Mihoyo Tech Otakus", "COmputer Science", 23, 40, "C++, JavaScript");
     developer1.ProjectHasDone();
+    developer1.GetPromotion();
    
     /*//properties of the employee without constructor
 
