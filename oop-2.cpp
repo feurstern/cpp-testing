@@ -1,7 +1,7 @@
 #include<iostream>
 
 using namespace std;
-
+//23 - 30 hiredtoday
 
 class PlayerCharacter{
 
@@ -11,7 +11,7 @@ class PlayerCharacter{
 
     public:
 
-    void setUsername(string username){
+        void setUsername(string username){
         Username = username;
     }
 
@@ -62,7 +62,42 @@ class PlayerCharacter{
 };
 
 
-class CharacterRace:PlayerCharacter{
+class CharacterRace:public PlayerCharacter{
+    string Race;
+
+    public:
+        void setRace(string race){
+            Race= race;
+        }
+
+        string getRace(){
+            return Race;
+        }
+
+
+        void RaceInfo(){
+            cout<<"Enter your main race:"<<endl;
+            cin>>Race;
+
+
+        cout<<"Name: "<<getUsername();
+        cout<<"\nServer: "<<getServer();
+        cout<<"\nAge: "<<getAge();
+
+        if(getServer()=="UK"){
+            cout<<"Hello there, welcome to our Game!"<<endl;
+        }
+        else{
+            cout<<"Konnichiwa, game he youkoso!"<<endl;
+        }
+    }
+
+    //constructor
+
+    CharacterRace(string username, string server, int age, string race): PlayerCharacter(username, server, age){
+        Race = race;
+    }
+        
 
 };
 
