@@ -11,5 +11,11 @@ int main(){
     int size = my_sizeof(favouriteLanguage);
 
     cout<<size;
+
+    int i;
+
+    for(i=0;i<=size;i++){
+        cout<<favouriteLanguage[i];
+    }
     
 }

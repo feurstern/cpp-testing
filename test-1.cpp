@@ -4,8 +4,7 @@ using namespace std;
 
 
 void findOddNumber(int n){
-    string result;
-    int z;
+   
 
     for (int i=0;i<=n;i++){
         if(i%2==1){
