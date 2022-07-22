@@ -10,7 +10,7 @@ int main(){
     cin>>userCount;
 
 
-    while (userCount>   0)
+    while (userCount>0)
     {
         userCount-=1;
         cout<<"\nOnly "<<userCount<<" left";
